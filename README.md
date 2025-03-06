@@ -44,5 +44,4 @@ It allows you to manage company operations including adding and removing workers
 ## Project Structure
 company_management.c – The main file containing the project logic.<br>
 company_management.h - File contains declarations and definitions used throughout the project.<br>
-README.md – This file.
 Makefile: A file used to automate the build and setup process of the project (e.g., compilation and running the game).
