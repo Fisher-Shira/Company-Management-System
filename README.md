@@ -30,14 +30,19 @@ It allows you to manage company operations including adding and removing workers
 2. Navigate to the project directory:
    ```bash
     cd Company-Management-System
-3. Compile the project:
+3. Compile and run using make:
    ```bash
-    gcc -o company_management company_management.c
-4. Run the executable:
+   make run
+- If make is not installed, you can compile manually:
    ```bash
-    ./company_management
+   gcc -o company_management company_management.c
+   ./company_management
+4. To clean the executable:
+   ```bash
+   make clean
 
 ## Project Structure
 company_management.c – The main file containing the project logic.<br>
 company_management.h - File contains declarations and definitions used throughout the project.<br>
 README.md – This file.
+Makefile: A file used to automate the build and setup process of the project (e.g., compilation and running the game).
