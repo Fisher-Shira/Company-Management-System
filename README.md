@@ -42,6 +42,7 @@ It allows you to manage company operations including adding and removing workers
    make clean
 
 ## Project Structure
-- **`company_management.c`**: The main file containing the project logic.
-- **`company_management.h`**: File contains declarations and definitions used throughout the project.
-- **`Makefile`**: A file used to automate the build and setup process of the project (e.g., compilation and running the game).
+- **`src/`**: Contains the C source code and header files for the project.
+- **`src/company_management.c`** – The main file containing the project logic.
+- **`src/company_management.h`** - Contains declarations and definitions used throughout the project.
+- **`Makefile`**: A file used to automate the build and setup process of the project (e.g., compilation and running the program).

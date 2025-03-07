@@ -1,23 +1,27 @@
 # Detect OS (Windows or Unix-based)
 ifeq ($(OS),Windows_NT)
-    RM = del /Q $(TARGET).exe
+    MKDIR = if not exist $(BUILD_DIR) mkdir $(BUILD_DIR)
+    RM = rmdir /s /q $(BUILD_DIR)
     SHELL := cmd.exe
 else
-    RM = rm -f $(TARGET)
+    MKDIR = mkdir -p $(BUILD_DIR)
+    RM = rm -rf $(BUILD_DIR)
 endif
 
 # Project details
 CC = gcc
+SRC_DIR = src
+BUILD_DIR = build
 TARGET = company_management
-SRC = company_management.c
 
 # Run the program
-run: $(TARGET)
-	./$(TARGET)
+run: compile
+	./$(BUILD_DIR)/$(TARGET)
 
 # Compile the C program
-$(TARGET): $(SRC)
-	$(CC) -o $(TARGET) $(SRC)
+compile:
+	$(MKDIR)
+	$(CC) -o $(BUILD_DIR)/$(TARGET) $(SRC_DIR)/$(TARGET).c
 	@echo "Compilation completed."
 
 # Clean the executable
